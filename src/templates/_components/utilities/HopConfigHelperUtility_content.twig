@@ -1,0 +1,35 @@
+{# @var craft \craft\web\twig\variables\CraftVariable #}
+{#
+/**
+ * Hop Config Helper plugin for Craft CMS
+ *
+ * HopConfigHelperUtility Utility Content
+ *
+ * @author    Hop Studios
+ * @copyright Copyright (c) 2020 Hop Studios
+ * @link      hopstudios.com
+ * @package   HopConfigHelper
+ * @since     1.0.0
+ */
+#}
+<div class="readable">
+    <h2>{{ "Environment Variables"|t('app') }}</h2>
+
+    <table class="data fullwidth fixed-layout" dir="ltr">
+        <tbody>
+            {% for key, value in envVars %}
+                <tr>
+                    <th class="light">{{ key }}</th>
+                    <td>{{ value }}</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+
+    <h2>General Config Variables</h2>
+
+    <pre>
+        {{ dump(configVars) }}
+    </pre>
+</div>
