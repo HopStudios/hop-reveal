@@ -1,0 +1,90 @@
+{# @var craft \craft\web\twig\variables\CraftVariable #}
+{#
+/**
+ * Hop Config Helper plugin for Craft CMS 3.x
+ *
+ * Hop Config Helper Settings.twig
+ *
+ * @author    Hop Studios
+ * @copyright Copyright (c) 2020 Hop Studios
+ * @link      hopstudios.com
+ * @package   HopConfigHelper
+ * @since     1.0.0
+ */
+#}
+
+{% import "_includes/forms" as forms %}
+
+<h1>Banner Visibility</h1>
+
+{{ forms.radioGroupField({
+    label: 'Front End Visibility',
+    id: 'frontEndVisibility',
+    name: 'frontEndVisibility',
+    options: [        
+        'Hide',
+        'Show to admins only',
+        'Show to everyone (not recommended!)'
+    ],
+    value: settings['frontEndVisibility']})
+}}
+
+{{ forms.radioGroupField({
+    label: 'Control Panel Visibility',
+    id: 'controlPanelVisibility',
+    name: 'controlPanelVisibility',
+    options: [        
+        'Hide',
+        'Show to admins only',
+        'Show to everyone (not recommended!)'
+    ],
+    value: settings['controlPanelVisibility']})
+}}
+
+<h1>Environment Labels</h1>
+<p>Labels and colours for the banner which appears at the top of your Control Panel</p>
+
+{{ forms.textField({
+    label: 'Production Label',
+    id: 'productionLabel',
+    placeholder: 'Production',  
+    name: 'productionLabel',
+    value: settings['productionLabel']})
+}}
+
+{{ forms.colorField({
+    label: 'Production Colour',
+    id: 'productionColour',  
+    name: 'productionColour',
+    value: settings['productionColour']})
+}}
+
+{{ forms.textField({
+    label: 'Staging Label',
+    id: 'stagingLabel',
+    placeholder: 'Production',  
+    name: 'stagingLabel',
+    value: settings['stagingLabel']})
+}}
+
+{{ forms.colorField({
+    label: 'Staging Colour',
+    id: 'stagingColour',
+    name: 'stagingColour',
+    value: settings['stagingColour']})
+}}
+
+{{ forms.textField({
+    label: 'Development Label',
+    id: 'productidevLabelonLabel',
+    placeholder: 'Production',  
+    name: 'devLabel',
+    value: settings['devLabel']})
+}}
+
+{{ forms.colorField({
+    label: 'Development Colour',
+    id: 'devColour',
+    name: 'devColour',
+    value: settings['devColour']})
+}}
