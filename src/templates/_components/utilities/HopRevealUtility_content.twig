@@ -1,0 +1,44 @@
+{# @var craft \craft\web\twig\variables\CraftVariable #}
+{#
+/**
+ * Hop Reveal plugin for Craft CMS
+ *
+ * HopRevealUtility Utility Content
+ *
+ * @author    Hop Studios
+ * @copyright Copyright (c) 2020 Hop Studios
+ * @link      hopstudios.com
+ * @package   HopReveal
+ * @since     1.0.0
+ */
+#}
+<div class="readable">
+    {% if configVars %}
+        <h2>Custom Config Variables</h2>
+            <table class="data fullwidth fixed-layout" dir="ltr">
+            <tbody>
+                {% for key, value in configVars %}
+                    <tr>
+                        <th class="light">{{ key }}</th>
+                        <td>{{ value }}</td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    {% endif %}
+    
+    <h2>{{ "Environment Variables"|t('app') }}</h2>
+
+    <table class="data fullwidth fixed-layout" dir="ltr">
+        <tbody>
+            {% for key, value in envVars %}
+                <tr>
+                    <th class="light">{{ key }}</th>
+                    <td>{{ value }}</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+
+</div>
