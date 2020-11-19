@@ -1,8 +1,12 @@
 # Hop Reveal plugin for Craft CMS 3.x
 
-Hop Reveal
+Hop Reveal gives site editors a quick and helpful visual cue to which server they are working on -- staging, development or production -- on both front-end and back-end website pages. (Surely we aren't the only ones who sometimes get mixed up!) Choose the text and color of the labels yourself. You can even make the labels visible to all users if you desire. 
 
-![Screenshot](resources/img/plugin-logo.png)
+This plugin also provides a handy utilities page where you can view key environment variables useful during development. Some of the many variables included are GATEWAY_INTERFACE, HTTP_ACCEPT, HTTP_COOKIE, HTTP_USER_AGENT, and that's just for starters.
+
+Get important information faster when you use Hop Reveal for Craft CMS.
+
+![Screenshot](resources/img/HopReveal.png)
 
 ## Requirements
 
@@ -24,7 +28,7 @@ To install the plugin, follow these instructions.
 
 ## Hop Reveal Overview
 
-This plugin helps developers in two ways. First, it places a banner across the top of your window (both frontend and backend), identifying which environment you're currently working on. This is useful for anyone who has access to more than just the production site. Second, it gathers all of your config variables into one place for easy reference.
+Visual indicator of staging, development and production servers; shows key config variables
 
 ## Config for Hop Reveal
 

@@ -60,7 +60,7 @@ class HopRevealUtility extends Utility
      */
     public static function iconPath()
     {
-        return Craft::getAlias("@hopstudios/hopreveal/resources/img/icon.ico");
+        return Craft::getAlias("@hopstudios/hop-reveal/resources/img/HopReveal.svg");
     }
 
     /**
