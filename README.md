@@ -6,48 +6,5 @@ This plugin also provides a handy utilities page where you can view key environm
 
 Get important information faster when you use Hop Reveal for Craft CMS.
 
-
-
-## Requirements
-
-This plugin requires Craft CMS 3.0.0-beta.23 or later.
-
-## Installation
-
-To install the plugin, follow these instructions.
-
-1. Open your terminal and go to your Craft project:
-
-        cd /path/to/project
-
-2. Then tell Composer to load the plugin:
-
-        composer require hopstudios/hop-reveal
-
-3. In the Control Panel, go to Settings → Plugins and click the “Install” button for Hop Reveal.
-
-## Hop Reveal Overview
-
-Visual indicator of staging, development and production servers; shows key config variables
-
-## Config for Hop Reveal
-
-After installation, please find the Config settings under Settings->Hop Reveal. You will find two sets of config options.
-
-### Banner Visibility
-These options allow you to control visibility of the environment banner for the frontend or control panel. Options are:
-- Hide (Hide the banner completely for everyone)
-- Show to admins
-- Show to everyone
-
-### Environment Labels
-Labels and colours for the banner which appears at the top of your Control Panel.
-Set a label which will appear in the banner for each of your environments. You may also specify a colour for the banner.
-
-## Utilities for Hop Reveal
-
-Additionally, you may find the full list of config variables under the Utilities->Hop Reveal menu.
-
-
-
-Brought to you by [Hop Studios](hopstudios.com)
+## Documentation
+For documentation and additional info please refer to https://hopstudios.com/software/hop-docusign/docs
