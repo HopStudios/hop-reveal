@@ -7,4 +7,4 @@ This plugin also provides a handy utilities page where you can view key environm
 Get important information faster when you use Hop Reveal for Craft CMS.
 
 ## Documentation
-For documentation and additional info please refer to https://hopstudios.com/software/hop-docusign/docs
+For documentation and additional info please refer to https://hopstudios.com/software/hop_reveal/docs
