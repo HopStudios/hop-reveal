@@ -48,8 +48,7 @@ class HopRevealService extends Component
         $colour = HopReveal::$plugin->getSettings()->getEnvironmentColour();
 
         $css = "
-            #hop-header {color: black; float:left; font-size: 1.3rem; margin-top: 10px; width:100%; text-align:center; position:absolute;}
-            #global-header {background-color:" . $colour . "}
+            #hop-header {color: black; float:left; font-size: 1rem; padding: 10px 0; width:100%; text-align:center; background-color:" . $colour . "};
         ";
         return $css;
     }
@@ -57,9 +56,9 @@ class HopRevealService extends Component
     private function controlPanelJs()
     {
         $label = HopReveal::$plugin->getSettings()->getEnvironmentLabel();
-        $hopHeaderElement = '<div id="hop-header">Env: ' . $label . '</div>';
+        $hopHeaderElement = '<div id="hop-header">' . $label . '</div>';
 
-        $js = "$('#global-header').prepend('" . $hopHeaderElement . "');";
+        $js = "$('#nav').before('" . $hopHeaderElement . "');";
         return $js;
     }
 
@@ -67,7 +66,7 @@ class HopRevealService extends Component
     private function frontEndJs()
     {
         $label = HopReveal::$plugin->getSettings()->getEnvironmentLabel();
-        $hopHeaderElement = '<div id="hop-header">Currently on ' . $label . '</div>';
+        $hopHeaderElement = '<div id="hop-header">' . $label . '</div>';
 
         $js = "$('body').prepend('" . $hopHeaderElement . "');";
         return $js;
