@@ -12,7 +12,7 @@ namespace hopstudios\hopreveal;
 
 use hopstudios\hopreveal\services\HopRevealService;
 use hopstudios\hopreveal\models\Settings;
-use hopstudios\hopreveal\utilities\HopRevealUtility as HopRevealUtilityUtility;
+use hopstudios\hopreveal\utilities\HopRevealUtility;
 
 use Craft;
 use craft\base\Plugin;
@@ -132,7 +132,7 @@ class HopReveal extends Plugin
             Utilities::class,
             Utilities::EVENT_REGISTER_UTILITY_TYPES,
             function (RegisterComponentTypesEvent $event) {
-                $event->types[] = HopRevealUtilityUtility::class;
+                $event->types[] = HopRevealUtility::class;
             }
         );
 

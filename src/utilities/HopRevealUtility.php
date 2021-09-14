@@ -28,58 +28,16 @@ use craft\base\Utility;
  */
 class HopRevealUtility extends Utility
 {
-    // Static
-    // =========================================================================
+	public static function displayName (): string
+	{
+		return Craft::t('hop-reveal', 'Hop Reveal');
+	}
 
-    /**
-     * Returns the display name of this utility.
-     *
-     * @return string The display name of this utility.
-     */
-    public static function displayName(): string
-    {
-        return Craft::t('hop-reveal', 'Hop Reveal');
-    }
+	public static function id (): string
+	{
+		return 'hop-reveal';
+	}
 
-    /**
-     * Returns the utility’s unique identifier.
-     *
-     * The ID should be in `kebab-case`, as it will be visible in the URL (`admin/utilities/the-handle`).
-     *
-     * @return string
-     */
-    public static function id(): string
-    {
-        return 'hopreveal-hop-reveal-utility';
-    }
-
-    /**
-     * Returns the path to the utility's SVG icon.
-     *
-     * @return string|null The path to the utility SVG icon
-     */
-    public static function iconPath()
-    {
-        return Craft::getAlias("@hopstudios/hop-reveal/resources/img/HopReveal.svg");
-    }
-
-    /**
-     * Returns the number that should be shown in the utility’s nav item badge.
-     *
-     * If `0` is returned, no badge will be shown
-     *
-     * @return int
-     */
-    public static function badgeCount(): int
-    {
-        return 0;
-    }
-
-    /**
-     * Returns the utility's content HTML.
-     *
-     * @return string
-     */
     public static function contentHtml(): string
     {
         $configVars = (array) Craft::$app->getConfig()->general;
