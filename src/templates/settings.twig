@@ -30,6 +30,17 @@
 }}
 
 {{ forms.radioGroupField({
+    label: 'Front End Position',
+    id: 'frontEndPosition',
+    name: 'frontEndPosition',
+    options: [        
+        'Fixed',
+        'Overlay',
+    ],
+    value: settings['frontEndPosition']})
+}}
+
+{{ forms.radioGroupField({
     label: 'Control Panel Visibility',
     id: 'controlPanelVisibility',
     name: 'controlPanelVisibility',

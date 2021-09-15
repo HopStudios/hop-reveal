@@ -66,6 +66,7 @@ class HopRevealService extends Component
     private function frontEndJs()
     {
         $label = HopReveal::$plugin->getSettings()->getEnvironmentLabel();
+
         $hopHeaderElement = '<div id="hop-header">' . $label . '</div>';
 
         $js = "$('body').prepend('" . $hopHeaderElement . "');";
@@ -74,11 +75,20 @@ class HopRevealService extends Component
 
     private function frontEndCss()
     {
+        // visibility 0: relative
+        // visibility 1: floating
+
+        $position = HopReveal::$plugin->getSettings()->frontEndPosition;
         $colour = HopReveal::$plugin->getSettings()->getEnvironmentColour();
 
-        $css = "
-            #hop-header {color: black; font-size: 2rem; width:100%; text-align:center; position:fixed; background-color: #" . $colour . "80; z-index:100000000;}
-        ";
+        $css = "#hop-header {color: black; font-size: 2rem; width:100%; text-align:center; height: 40px; z-index:100000000;";
+        
+        if ($position == 0 ) {
+            $css = $css . " position:relative; background-color: #" . $colour . ";}";
+        } else {
+            $css = $css . " position:fixed; background-color: #" . $colour . "80;}";
+        }
+
         return $css;
     }
 
