@@ -1,5 +1,9 @@
 # Hop Reveal Changelog
 
+## 1.1.1 - 2022-05-13
+### Added
+- Update changelog file for Craft Store
+
 ## 1.1.0 - 2021-09-15
 ### Added
 - Add frontend positioning of label
